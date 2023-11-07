@@ -1,0 +1,110 @@
+package Class11_constructor;
+
+public class Student {
+	
+	public Student()
+	{
+		System.out.println("Hello Students");
+	}
+	
+	public Student(String Name)
+	{
+		System.out.println("Hello Students");
+	}
+	
+	public Student(int RollNumber)
+	{
+		System.out.println("Hello students, rollnumber is" +RollNumber);
+	}
+		
+		public void attendClasses()
+		{
+			System.out.println("Students can attend classes ");
+		}
+	
+
+	public static void main(String[] args) 
+	{
+		
+		Student s1= new Student();
+		s1.attendClasses();
+		s1.attendTest();
+		
+	}
+	
+	
+	
+	public void attendTest()
+	{
+		System.out.println("Students can attend test ");
+	}
+	
+	
+
+}
+package samplecalc;
+
+import java.util.Scanner;
+import java.util.function.DoubleToIntFunction;
+
+public class CalcDemo {
+
+	public static void main(String[] args) 
+	{
+		
+	        Scanner sc = new Scanner(System.in);
+	        boolean flag= true;
+	        
+	        while(flag) {
+	        	
+	       
+	        System.out.println("Enter the First Number");
+	        int n1=sc.nextInt();
+	        System.out.println("Enter the Second Number");
+	        int n2=sc.nextInt();
+	        System.out.println("Enter the Operator (/,+,*,-)");
+	        String operator=sc.next();
+	       double result=0.0;
+	        
+	       if (operator.equals("+"))
+	       {
+	    		   
+	    	 result =n1+n2;
+	    	 
+	       }
+	       else if(operator.equals("-"))
+	       {
+	    		   
+	    	 result =n1-n2;
+	       }
+	       else if(operator.equals("*"))
+	       {
+	    		   
+	    	 result =n1*n2;
+	       }
+	       else if(operator.equals("/"))
+	       {
+	    		   
+	    	 result =n1/n2;
+	       }
+	       else{
+	    	   System.out.println("supporting only mentioned operators");
+	    	   
+	       }
+	       System.out.println("result=" + result);
+
+	       System.out.println("Do you want to perform another calculation? (yes/no)");
+	      
+	        String contString= sc.next();
+	        
+	        
+	        
+	        if(contString.equalsIgnoreCase("yes")||contString.equalsIgnoreCase("y")) {
+	        	
+	        }
+	        else {
+				flag=false;
+				System.out.println("Thanks for using calc");
+			}
+	        }
+	        
